@@ -20,3 +20,42 @@ body {
 span {
     font-size: 300%;
 }
+
+.red-fixed {
+  background-color: red;
+  animation: wait-for-red 1s;
+}
+
+.blink-red-infinite {
+  background-color: red;
+  animation: blink-red-infinite 1s infinite;
+}
+
+.blink-red-infinite-faster {
+  background-color: red;
+  animation: blink-red-infinite-faster 1s infinite;
+}
+
+.blink-red-infinite-superfast {
+  background-color: red;
+  animation: blink-red-infinite-faster .5s infinite;
+}
+
+@keyframes wait-for-red {
+  0%   {background-color: white;}
+  50%  {background-color: red;}
+}
+
+@keyframes blink-red-infinite {
+  0%   {background-color: white;}
+  50%  {background-color: red;}
+  100%   {background-color: white;}
+}
+
+@keyframes blink-red-infinite-faster {
+  0%  {background-color: white;}
+  25% {background-color: red;}
+  50% {background-color: white;}
+  75% {background-color: red;}
+  100%{background-color: white;}
+}
